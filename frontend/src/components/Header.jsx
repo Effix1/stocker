@@ -1,8 +1,9 @@
 import { NavLink } from "react-router-dom";
+import "../scss/Main.scss";
 
 export default function Header ({ className }) {
     return (
-        <header>
+        <header className="head">
             <h1>c'est le header</h1>
             <nav>
                 <ul>
