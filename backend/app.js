@@ -61,6 +61,46 @@ app.get('/api/stuff', (req, res, next) => {
       price: 3500,
       userId: 'gsomidsffsf',
     },
+    {
+      _id: 'r124r',
+      title: 'mon deuxieme objet',
+      description: 'les infios d emon deuxieme objet',
+      imageUrl: 'https://www.turbo.fr/sites/default/files/styles/slideshow_images/public/2020-05/Aston%20Martin%20DBS%20Superleggera.png?itok=3VmVtt3G',
+      price: 4000,
+      userId: 'gsomidsffsf',
+    },
+    {
+      _id: 'r124r',
+      title: 'mon deuxieme objet',
+      description: 'les infios d emon deuxieme objet',
+      imageUrl: 'https://www.turbo.fr/sites/default/files/styles/slideshow_images/public/2020-05/Aston%20Martin%20DBS%20Superleggera.png?itok=3VmVtt3G',
+      price: 4000,
+      userId: 'gsomidsffsf',
+    },
+    {
+      _id: 'r124r',
+      title: 'mon deuxieme objet',
+      description: 'les infios d emon deuxieme objet',
+      imageUrl: 'https://www.turbo.fr/sites/default/files/styles/slideshow_images/public/2020-05/Aston%20Martin%20DBS%20Superleggera.png?itok=3VmVtt3G',
+      price: 4000,
+      userId: 'gsomidsffsf',
+    },
+    {
+      _id: 'r124r',
+      title: 'mon deuxieme objet',
+      description: 'les infios d emon deuxieme objet',
+      imageUrl: 'https://www.turbo.fr/sites/default/files/styles/slideshow_images/public/2020-05/Aston%20Martin%20DBS%20Superleggera.png?itok=3VmVtt3G',
+      price: 4000,
+      userId: 'gsomidsffsf',
+    },
+    {
+      _id: 'r124r',
+      title: 'mon deuxieme objet',
+      description: 'les infios d emon deuxieme objet',
+      imageUrl: 'https://www.turbo.fr/sites/default/files/styles/slideshow_images/public/2020-05/Aston%20Martin%20DBS%20Superleggera.png?itok=3VmVtt3G',
+      price: 4000,
+      userId: 'gsomidsffsf',
+    },
   ];
   res.status(200).json(stuff);
 });

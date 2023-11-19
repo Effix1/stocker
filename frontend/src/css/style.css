@@ -1,6 +1,9 @@
-.head {
-  color: red;
-  background-color: silver;
+* {
+  box-sizing: border-box;
+}
+
+header {
+  color: purple;
 }
 
 /*# sourceMappingURL=style.css.map */

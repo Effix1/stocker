@@ -1,0 +1,35 @@
+.card{
+    
+    display: flex;
+   
+    gap: 15px;
+    flex-wrap: wrap;
+    .card_content {
+        position: relative;
+        background-color: grey;
+        color: pink;
+        width: 250px;
+        height: 250px;
+        display: flex;
+        border: 3px grey solid;
+        border-radius: 50px;
+        overflow: hidden;
+       
+       
+        h2 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 20%;
+            z-index: 2;
+        }
+        img {position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 0;
+        }
+    }
+}

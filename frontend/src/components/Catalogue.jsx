@@ -1,3 +1,4 @@
+import "../scss/layout/_catalogue.scss"
 import React, { useState, useEffect } from 'react';
 
 
@@ -34,10 +35,10 @@ export default function Catalogue () {
 
   return (
     <>
-       
-             {/* Liste des produits */}
+      <div className="card">
+                {/* Liste des produits */}
       {products.map((product) => (
-        <div key={product._id}>
+        <div key={product._id} className='card_content'>
           <h2>{product.title}</h2>
           <p>{product.description}</p>
           <p>Price: {product.price}</p>
@@ -45,6 +46,8 @@ export default function Catalogue () {
           {/* Ajoutez d'autres informations du produit au besoin */}
         </div>
       ))}
+        </div> 
+     
        
   </>
   )
