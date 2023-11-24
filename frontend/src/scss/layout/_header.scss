@@ -1,3 +1,37 @@
-header {
-    color: purple;
+@import '../utils/mixin.scss';
+
+.head {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    .header_title {
+        text-align: center
+    };
+    .header_nav {
+        width: 100%;
+        ul{
+            display: flex;
+            gap: 6px;
+            padding: 0;
+            margin: 0;
+            li{
+                display: flex;
+                list-style: none;
+                min-height: 25px;
+                align-items: center;
+                padding: 0px 5px;
+                @include border_style(blue,aqua,purple,black);
+                .header_nav_link {
+                    color: midnightblue;
+                    text-decoration: none;
+                    
+                    
+                }
+            }
+        }
+       
+        
+    }
+
 }

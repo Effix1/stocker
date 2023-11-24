@@ -4,22 +4,22 @@ import "../scss/layout/_header.scss";
 export default function Header ({ className }) {
     return (
         <header className="head">
-            <h1>c'est le header</h1>
-            <nav>
+            <h1 className="header_title">Stocker</h1>
+            <nav className="header_nav">
                 <ul>
                     <li>
                         {''}
-                        <NavLink to='/' className={"firstLink"}>
+                        <NavLink to='/' className={"header_nav_link"}>
                             homepage
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to='/catalogue' className={'secondLink'}>
+                        <NavLink to='/catalogue' className={'header_nav_link'}>
                         catalogue
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to='/ajouter' className={'secondLink'}>
+                        <NavLink to='/ajouter' className={'header_nav_link'}>
                         ajout objet
                         </NavLink>
                     </li>

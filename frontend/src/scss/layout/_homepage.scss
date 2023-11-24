@@ -1,0 +1,26 @@
+@import "../utils/mixin.scss";
+
+.content_homepage {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-between;
+    .content_homepage_title{
+        flex-basis: 100%;
+    }
+    .content_homepage_section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 10px;
+        width: 250px;
+        height: 250px;
+        @include border_style(blue,aqua,purple,black);
+        p{
+            color: red;
+          
+        }
+
+    }
+    
+  
+}
