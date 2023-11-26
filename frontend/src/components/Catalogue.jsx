@@ -1,10 +1,7 @@
-import "../scss/layout/_catalogue.scss"
+import '../scss/layout/_catalogue.scss';
 import React, { useState, useEffect } from 'react';
 
-
-
-
-export default function Catalogue () {
+export default function Catalogue() {
   const [products, setProducts] = useState([]);
   const [formData, setFormData] = useState({
     title: '',
@@ -30,27 +27,20 @@ export default function Catalogue () {
       });
   }, []);
 
-
-
-
   return (
     <>
-      <div className="card">
-                {/* Liste des produits */}
-      {products.map((product) => (
-        <div key={product._id} className='card_content'>
-          <h2>{product.title}</h2>
-          <p>{product.description}</p>
-          <p>Price: {product.price}</p>
-          <img class="" src={product.imageUrl} alt="'objet"></img>
-          {/* Ajoutez d'autres informations du produit au besoin */}
-        </div>
-      ))}
-        </div> 
-     
-       
-  </>
-  )
-  
+      <div className='card'>
+        {/* Liste des produits */}
+        {products.map((product) => (
+          <div key={product._id} className='card_content'>
+            <h2>{product.title}</h2>
+            <p>{product.description}</p>
+            <p>Prix: {product.price}</p>
+            <img class='' src={product.imageUrl} alt="'objet"></img>
+            {/* Ajoutez d'autres informations du produit au besoin */}
+          </div>
+        ))}
+      </div>
+    </>
+  );
 }
-  

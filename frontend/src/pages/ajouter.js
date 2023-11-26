@@ -1,3 +1,5 @@
+import '../scss/layout/_ajouter.scss';
+
 import React, { useState, useEffect } from 'react';
 
 export default function Layout() {
@@ -8,8 +10,6 @@ export default function Layout() {
     imageUrl: '',
     price: 0,
   });
-
- 
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -63,53 +63,55 @@ export default function Layout() {
 
   return (
     <>
-      <h1>formulaire d'ajout</h1>
+      <div className='ajouter_content'>
+        <h1 className='ajouter_title'>formulaire d'ajout</h1>
 
-      {/* Formulaire d'ajout d'objet */}
-      <form onSubmit={handleSubmit}>
-        <label>
-          Titre:
-          <input
-            type="text"
-            name="title"
-            value={formData.title}
-            onChange={handleChange}
-          />
-        </label>
-        <br />
-        <label>
-          Description:
-          <textarea
-            name="description"
-            value={formData.description}
-            onChange={handleChange}
-          />
-        </label>
-        <br />
-        <label>
-          Image URL:
-          <input
-            type="text"
-            name="imageUrl"
-            value={formData.imageUrl}
-            onChange={handleChange}
-          />
-        </label>
-        <br />
-        <label>
-          Prix:
-          <input
-            type="number"
-            name="price"
-            value={formData.price}
-            onChange={handleChange}
-          />
-        </label>
-        <br />
-        <button type="submit">Ajouter un objet</button>
-      </form>
-
-
+        {/* Formulaire d'ajout d'objet */}
+        <form onSubmit={handleSubmit}>
+          <label>
+            <p>Titre:</p>
+            <input
+              type='text'
+              name='title'
+              value={formData.title}
+              onChange={handleChange}
+            />
+          </label>
+          <br />
+          <label>
+            <p> Description:</p>
+            <textarea
+              name='description'
+              value={formData.description}
+              onChange={handleChange}
+            />
+          </label>
+          <br />
+          <label>
+            <p>Image URL:</p>
+            <input
+              type='text'
+              name='imageUrl'
+              value={formData.imageUrl}
+              onChange={handleChange}
+            />
+          </label>
+          <br />
+          <label>
+            <p> Prix:</p>
+            <input
+              type='number'
+              name='price'
+              value={formData.price}
+              onChange={handleChange}
+            />
+          </label>
+          <br />
+          <button className='button_form' type='submit'>
+            Ajouter un objet
+          </button>
+        </form>
+      </div>
     </>
   );
 }
