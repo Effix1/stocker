@@ -2,8 +2,10 @@ import { createBrowserRouter } from 'react-router-dom';
 import Layout from './layouts/layout';
 import PropertyError from './pages/PropertyError';
 import Homepage from './pages/homepage';
-import Catalogue from './components/Catalogue';
+import Catalogue from './pages/Catalogue';
 import Ajouter from './pages/ajouter';
+import Plan from './pages/Plan';
+import Liste from './pages/Liste';
 
 export default createBrowserRouter([
   {
@@ -12,17 +14,31 @@ export default createBrowserRouter([
     errorElement: <PropertyError />,
     children: [
       {
-        path:'',
-        element: <Homepage/>
+        path: '',
+        element: <Homepage />,
       },
       {
         path: 'catalogue',
-        element: <Catalogue/>
+        element: <Catalogue />,
       },
       {
         path: 'ajouter',
-        element: <Ajouter/>
-      }
-    ]
+        element: <Ajouter />,
+      },
+    ],
+  },
+  {
+    path: 'index1',
+    element: <Layout />,
+    children: [
+      {
+        path: 'plan',
+        element: <Plan />,
+      },
+      {
+        path: 'liste',
+        element: <Liste />,
+      },
+    ],
   },
 ]);

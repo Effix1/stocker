@@ -33,9 +33,11 @@ export default function Catalogue() {
         {/* Liste des produits */}
         {products.map((product) => (
           <div key={product._id} className='card_content'>
-            <h2>{product.title}</h2>
-            <p>{product.description}</p>
-            <p>Prix: {product.price}</p>
+            <div className='card_content_title'>
+              <h2>{product.title}</h2>
+              <p>{product.description}</p>
+            </div>
+            <p className='card_content_price'>{product.price} €</p>
             <img class='' src={product.imageUrl} alt="'objet"></img>
             {/* Ajoutez d'autres informations du produit au besoin */}
           </div>

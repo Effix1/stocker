@@ -95,7 +95,7 @@ app.get('/api/stuff', (req, res, next) => {
     },
     {
       _id: 'r1nfhg24r',
-      title: 'mon deuxieme objet',
+      title: 'mon dernier objet',
       description: 'les infios d emon deuxieme objet',
       imageUrl: 'https://www.turbo.fr/sites/default/files/styles/slideshow_images/public/2020-05/Aston%20Martin%20DBS%20Superleggera.png?itok=3VmVtt3G',
       price: 4000,

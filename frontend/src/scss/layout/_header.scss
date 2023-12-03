@@ -6,11 +6,14 @@
   align-content: center;
   flex-wrap: wrap;
   margin-bottom: 10px;
-  .header_title {
-    padding: 10px 7px 10px 7px;
-    border-radius: 25px 5px;
-    text-align: center;
-    box-shadow: 1px 2px 2px blue, inset 1px 3px 3px silver;
+  a {
+    text-decoration: none;
+    .header_title {
+      padding: 10px 7px 10px 7px;
+      border-radius: 25px 5px;
+      text-align: center;
+      box-shadow: 1px 2px 2px blue, inset 1px 3px 3px silver;
+    }
   }
   .header_nav {
     width: 100%;
