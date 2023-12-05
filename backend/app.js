@@ -4,7 +4,7 @@ const app = express();
 
 const mongoose = require('mongoose');
 
-const Objet = require('./models/Objet')
+const Thing = require('./models/thing.js')
 
 mongoose.connect('mongodb+srv://Effix1st:Eloise2015@cluster0.oljcbaq.mongodb.net/?retryWrites=true&w=majority')
   .then(() => console.log('Connexion à MongoDB réussie !'))
@@ -24,84 +24,20 @@ app.use((req, res, next) => {
   );
   next();
 });
-//const mongoose = require ('mongoose');
+
 app.post('/api/stuff', (req, res, next) => {
   delete req.body._id;
-  const objet = new Objet({
+  const thing = new Thing({
     ...req.body
   });
-  objet.save()
+  thing.save()
   .then(()=> res.status(201).json({message : 'Objet en registrée'}))
   .catch(error => res.status(400).json({error}))
 });
 
-app.get('/api/stuff', (req, res, next) => {
-  const stuff = [
-    {
-      _id: 'r123',
-      title: 'mon premier objet',
-      description: 'les infios d emon premier objet',
-      imageUrl: 'https://img.freepik.com/vecteurs-libre/tete-panthere-noire-colere-effrayante_225004-1577.jpg?size=338&ext=jpg',
-      price: 4000,
-      userId: 'gsomidsffsf',
-    },
-    {
-      _id: 'r12ryry4r',
-      title: 'mon deuxieme objet',
-      description: 'les infios d emon deuxieme objet',
-      imageUrl: 'https://www.turbo.fr/sites/default/files/styles/slideshow_images/public/2020-05/Aston%20Martin%20DBS%20Superleggera.png?itok=3VmVtt3G',
-      price: 4000,
-      userId: 'gsomidsffsf',
-    },
-    {
-      _id: 'r12rryr5',
-      title: 'mon troisieme objet',
-      description: 'les infios d emon troisieme objet',
-      imageUrl: '',
-      price: 3500,
-      userId: 'gsomidsffsf',
-    },
-    {
-      _id: 'r12rtyr4r',
-      title: 'mon deuxieme objet',
-      description: 'les infios d emon deuxieme objet',
-      imageUrl: 'https://www.turbo.fr/sites/default/files/styles/slideshow_images/public/2020-05/Aston%20Martin%20DBS%20Superleggera.png?itok=3VmVtt3G',
-      price: 4000,
-      userId: 'gsomidsffsf',
-    },
-    {
-      _id: 'r12jgjgj4r',
-      title: 'mon deuxieme objet',
-      description: 'les infios d emon deuxieme objet',
-      imageUrl: 'https://www.turbo.fr/sites/default/files/styles/slideshow_images/public/2020-05/Aston%20Martin%20DBS%20Superleggera.png?itok=3VmVtt3G',
-      price: 4000,
-      userId: 'gsomidsffsf',
-    },
-    {
-      _id: 'r1fhjgkg24r',
-      title: 'mon deuxieme objet',
-      description: 'les infios d emon deuxieme objet',
-      imageUrl: 'https://www.turbo.fr/sites/default/files/styles/slideshow_images/public/2020-05/Aston%20Martin%20DBS%20Superleggera.png?itok=3VmVtt3G',
-      price: 4000,
-      userId: 'gsomidsffsf',
-    },
-    {
-      _id: 'r1ff24r',
-      title: 'mon deuxieme objet',
-      description: 'les infios d emon deuxieme objet',
-      imageUrl: 'https://www.turbo.fr/sites/default/files/styles/slideshow_images/public/2020-05/Aston%20Martin%20DBS%20Superleggera.png?itok=3VmVtt3G',
-      price: 4000,
-      userId: 'gsomidsffsf',
-    },
-    {
-      _id: 'r1nfhg24r',
-      title: 'mon dernier objet',
-      description: 'les infios d emon deuxieme objet',
-      imageUrl: 'https://www.turbo.fr/sites/default/files/styles/slideshow_images/public/2020-05/Aston%20Martin%20DBS%20Superleggera.png?itok=3VmVtt3G',
-      price: 4000,
-      userId: 'gsomidsffsf',
-    },
-  ];
-  res.status(200).json(stuff);
+app.use('/api/stuff', (req, res, next) => {
+  Thing.find()
+  .then(things => res.status(200).json(things ))
+  .catch(error => res.status(400).json({ error }));
 });
 module.exports = app;

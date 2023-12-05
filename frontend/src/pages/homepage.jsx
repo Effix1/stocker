@@ -8,7 +8,7 @@ export default function Homepage() {
         <h1 className='content_homepage_title'>c'est la homme page</h1>
         <NavLink to='/index1/plan'>
           <div className='content_homepage_section'>
-            <p>section généré par rapport au nombre d'onglet indexé</p>
+            <p>Plan</p>
           </div>
         </NavLink>
 
@@ -18,7 +18,7 @@ export default function Homepage() {
           </div>
         </NavLink>
         <div className='content_homepage_section'>
-          <p>section</p>
+          <p>section généré par rapport au nombre d'onglet indexé</p>
         </div>
         <div className='content_homepage_section'>
           <p>section</p>
