@@ -6,6 +6,7 @@ import Catalogue from './pages/Catalogue';
 import Ajouter from './pages/ajouter';
 import Plan from './pages/Plan';
 import Liste from './pages/Liste';
+import Produit from './components/produit';
 
 export default createBrowserRouter([
   {
@@ -24,6 +25,10 @@ export default createBrowserRouter([
       {
         path: 'ajouter',
         element: <Ajouter />,
+      },
+      {
+        path: 'produit',
+        element: <Produit />,
       },
     ],
   },

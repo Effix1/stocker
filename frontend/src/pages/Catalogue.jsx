@@ -1,5 +1,6 @@
 import '../scss/layout/_catalogue.scss';
 import React, { useState, useEffect } from 'react';
+import { NavLink } from 'react-router-dom';
 
 export default function Catalogue() {
   const [products, setProducts] = useState([]);
@@ -32,15 +33,18 @@ export default function Catalogue() {
       <div className='card'>
         {/* Liste des produits */}
         {products.map((product) => (
-          <div key={product._id} className='card_content'>
-            <div className='card_content_title'>
-              <h2>{product.title}</h2>
-              <p>{product.description}</p>
+          <NavLink to={`/produit?id=${product._id}`} key={product._id}>
+            ;
+            <div key={product._id} className='card_content'>
+              <div className='card_content_title'>
+                <h2>{product.title}</h2>
+                <p>{product.description}</p>
+              </div>
+              <p className='card_content_price'>{product.price} €</p>
+              <img className='' src={product.imageUrl} alt="'objet"></img>
+              {/* Ajoutez d'autres informations du produit au besoin */}
             </div>
-            <p className='card_content_price'>{product.price} €</p>
-            <img class='' src={product.imageUrl} alt="'objet"></img>
-            {/* Ajoutez d'autres informations du produit au besoin */}
-          </div>
+          </NavLink>
         ))}
       </div>
     </>
