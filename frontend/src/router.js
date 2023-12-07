@@ -7,6 +7,7 @@ import Ajouter from './pages/ajouter';
 import Plan from './pages/Plan';
 import Liste from './pages/Liste';
 import Produit from './components/produit';
+import Miseajour from './pages/Maj';
 
 export default createBrowserRouter([
   {
@@ -29,6 +30,10 @@ export default createBrowserRouter([
       {
         path: 'produit',
         element: <Produit />,
+      },
+      {
+        path: 'modifierproduit',
+        element: <Miseajour />,
       },
     ],
   },
