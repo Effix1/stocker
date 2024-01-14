@@ -1,0 +1,47 @@
+@import '../utils/mixin.scss';
+
+.produit_card {
+  position: relative;
+
+  height: 500px;
+  width: 500px;
+  @include border_style(blue, aqua, purple, black);
+  padding: 0px 0px;
+
+  .produit_img {
+    height: 100%;
+    width: 100%;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+  }
+  .produit_content {
+    @include border_style(blue, aqua, purple, black);
+
+    .produit_title {
+      color: black;
+
+      text-align: center;
+    }
+
+    .produit_content_button {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 10px;
+      padding: 10px;
+      .boutton {
+        width: 50%;
+      }
+      .modifier {
+        background-color: red;
+      }
+      .supprimer {
+        background-color: blue;
+      }
+    }
+  }
+}

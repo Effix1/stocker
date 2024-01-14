@@ -30,22 +30,24 @@ export default function Catalogue() {
 
   return (
     <>
-      <div className='card'>
-        {/* Liste des produits */}
-        {products.map((product) => (
-          <NavLink to={`/produit?id=${product._id}`} key={product._id}>
-            ;
-            <div key={product._id} className='card_content'>
-              <div className='card_content_title'>
-                <h2>{product.title}</h2>
-                <p>{product.description}</p>
+      <div className='catalogues_content'>
+        <div className='card'>
+          {/* Liste des produits */}
+          {products.map((product) => (
+            <NavLink to={`/produit?id=${product._id}`} key={product._id}>
+              <div key={product._id} className='card_content'>
+                <div className='card_content_title'>
+                  <h2>{product.title}</h2>
+                  <p>{product.description}</p>
+                </div>
+                <p className='card_content_price'>{product.price} €</p>
+                <img className='' src={product.imageUrl} alt="'objet"></img>
+                {/* Ajoutez d'autres informations du produit au besoin */}
               </div>
-              <p className='card_content_price'>{product.price} €</p>
-              <img className='' src={product.imageUrl} alt="'objet"></img>
-              {/* Ajoutez d'autres informations du produit au besoin */}
-            </div>
-          </NavLink>
-        ))}
+            </NavLink>
+          ))}
+        </div>
+        <div className='lecube'></div>
       </div>
     </>
   );

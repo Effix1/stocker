@@ -7,7 +7,7 @@ import Ajouter from './pages/ajouter';
 import Plan from './pages/Plan';
 import Liste from './pages/Liste';
 import Produit from './components/produit';
-import Miseajour from './pages/Maj';
+import Modifier from './pages/modifier';
 
 export default createBrowserRouter([
   {
@@ -33,7 +33,7 @@ export default createBrowserRouter([
       },
       {
         path: 'modifierproduit',
-        element: <Miseajour />,
+        element: <Modifier />,
       },
     ],
   },

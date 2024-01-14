@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
+import('../scss/components/_produit.scss');
 
 export default function Produit() {
   const [product, setProduct] = useState(null);
@@ -57,17 +58,29 @@ export default function Produit() {
 
   // Vous pouvez utiliser les données du produit ici pour le rendu
   return (
-    <div>
-      <h1>{product.title}</h1>
-      <p>{product.description}</p>
-      <img src={product.imageUrl} alt={product.title} />
-      <p>{product.price} €</p>
-      <button>
-        <NavLink to={`/modifierproduit?id=${product._id}`} key={product._id}>
-          modifier
-        </NavLink>
-      </button>
-      <button onClick={handleDelete}>supprimer</button>
+    <div className='produit_card'>
+      <div className='produit_img'>
+        <img src={product.imageUrl} alt={product.title} />
+      </div>
+      <div className='produit_content'>
+        <h1 className='produit_title'>{product.title}</h1>
+        <p>{product.description}</p>
+
+        <p>{product.price} €</p>
+        <div className='produit_content_button'>
+          <button className='boutton modifier'>
+            <NavLink
+              to={`/modifierproduit?id=${product._id}`}
+              key={product._id}
+            >
+              modifier
+            </NavLink>
+          </button>
+          <button className='boutton supprimer' onClick={handleDelete}>
+            supprimer
+          </button>
+        </div>
+      </div>
     </div>
   );
 }
